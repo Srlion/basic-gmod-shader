@@ -1,7 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 
-set "File=../compile_shader_list.txt"
+set "File=compile_shader_list.txt"
 
 set "validVersions=20b 30"
 set "fallbackVersion=20b"
@@ -46,7 +46,7 @@ for /f "usebackq tokens=* delims=" %%A in ("%File%") do (
 
     REM Compile for each valid version found in the line (or the fallback version)
     for %%V in (!versionsInLine!) do (
-        set "compileArgs=/O 3 -ver %%V -shaderpath %CD%/../src !cleanedLine!"
+        set "compileArgs=/O 3 -ver %%V -shaderpath %CD%/src !cleanedLine!"
 
         echo Compiling '!cleanedLine!' with version '%%V'
         call "ShaderCompile.exe" !compileArgs!

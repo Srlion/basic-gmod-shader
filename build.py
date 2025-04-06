@@ -51,9 +51,7 @@ class GMAWriter:
 def main():
     # run util/build_shaders.bat to compile the shaders.
     print("Compiling shaders...")
-    os.chdir("util")
     os.system("build_shaders.bat")
-    os.chdir("..")
 
     # Create a new GMA file with the compiled shaders.
     version = str(int(time.time()))
