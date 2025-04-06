@@ -1,0 +1,5 @@
+*.vcs
+*.inc
+sound.cache
+/compiled
+!src/shaders/fxc/.gitkeep

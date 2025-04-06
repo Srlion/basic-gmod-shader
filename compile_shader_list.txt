@@ -1,0 +1,3 @@
+my_shader_vertex_vsxx.hlsl -v-30
+
+my_shader_psxx.hlsl -v-30
